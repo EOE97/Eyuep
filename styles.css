@@ -1,0 +1,207 @@
+/* Allgemeines Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    color: black;
+    line-height: 1.6;
+    text-align: center;
+    padding: 0 20px; /* Allgemeiner Abstand links und rechts */
+}
+
+/* Blocksatz für Fließtext */
+p {
+    text-align: justify; /* Blocksatz für den Fließtext */
+    max-width: 600px; /* Begrenzt die Textbreite */
+    margin: 0 auto 2rem auto; /* Abstand nach unten */
+}
+
+/* Navigation */
+header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: inline-flex;
+    gap: 2rem;
+}
+
+nav ul li {
+    font-size: 0.9rem;
+    font-weight: normal;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+}
+
+nav ul li a.active::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    margin: 0 auto;
+}
+
+/* Zentriert den gesamten Hauptinhalt */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Über mich Sektion */
+.section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+/* Banner und Content für Projekte */
+/* Banner mit Hintergrundbild */
+.banner {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 2rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    width: 60%;  
+    max-width: 700px;
+    margin: 1.5rem auto;
+    border-radius: 3px;
+    position: relative;
+}
+
+/* Der Text bleibt im Vordergrund */
+.banner-title {
+    position: relative;
+    z-index: 2;
+}
+
+/* Overlay für leichten Schatteneffekt über dem Bild */
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    z-index: 1;
+}
+
+/* Allgemeine Abstände für Textbereiche */
+p {
+    max-width: 600px; /* Begrenzt die Textbreite */
+    margin: 0 auto 2rem auto; /* Fügt Abstand nach unten hinzu */
+}
+
+
+.media p {
+    max-width: 600px;
+    margin: 0.5rem auto; 
+    font-size: 0.9rem; 
+    color: #555; 
+    text-align: center;
+}
+
+.media img, .media video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 0.5rem; 
+}
+
+
+.section-separator {
+    margin-top: 3rem; 
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Arial', sans-serif;
+}
+
+
+.btn:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+
+.btn + .banner {
+    margin-top: 4rem; /* Fügt mehr Abstand zwischen Button und nächstem Banner hinzu */
+}
+
+/* Trennlinie */
+.divider {
+    width: 60%;  
+    margin: 3rem auto;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.section-separator2 {
+    margin-top: 1rem; 
+}
+
+.play-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.play-button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.play-button:hover {
+    background-color: #555;
+}
